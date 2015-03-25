@@ -18,6 +18,5 @@ public class ImMain {
         Integer port = Integer.parseInt(args[0]);
         logger.info(String.format("the server is start on {0}", port));
 
-
     }
 }
