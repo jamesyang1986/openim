@@ -26,9 +26,11 @@ public class ImTcpDecoder extends LengthFieldBasedFrameDecoder {
         Byte tmp = frame.readByte();
         frame.readByte();
 
+        int len = frame.readInt();
+        byte[] body = new byte[len];
+        frame.readBytes(body);
 
         return null;
-
     }
 
 

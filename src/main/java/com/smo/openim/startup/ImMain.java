@@ -1,6 +1,7 @@
 package com.smo.openim.startup;
 
 
+import com.smo.openim.connector.ImTcpServer;
 import org.apache.log4j.Logger;
 
 /**
@@ -16,6 +17,9 @@ public class ImMain {
         }
 
         Integer port = Integer.parseInt(args[0]);
+        ImTcpServer imServer = new ImTcpServer(port);
+        imServer.start();
+
         logger.info(String.format("the server is start on {0}", port));
 
     }
